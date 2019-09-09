@@ -1,0 +1,99 @@
+.list-wrap{
+  position: absolute;
+  top: 153px;
+  left: 0;
+  width: 100%;
+  background-color: #f3f5f7;
+  padding-top: 0.2rem;
+}
+.test_content li{
+  margin-bottom:0.15rem;
+  background: #ffffff;
+  padding: 0.2rem 0.3rem;
+  overflow: hidden;
+}
+.test_content img{
+  float: left;
+  height:1.3rem;
+  width:1.52rem;
+}
+.test_content div{
+  width: 5rem;
+  float: left;
+  height:1.3rem;
+  margin-left:0.3rem;
+  position: relative;
+}
+.test_content h3{
+  font-size: 0.30rem;
+  color:#333333;
+}
+.test_content p{
+  font-size: 0.22rem;
+  width:70%;
+  color:#999999;
+  margin-top: 0.25rem;
+  height: 0.3rem;
+  line-height: 0.3rem;
+}
+#test_content .type_name{
+  width: 1rem;
+  display: inline-block;
+}
+.test_content p .know_name{
+  width: 2.2rem;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: top;
+  display: inline-block;
+}
+.test_content p.list_state{
+  position:absolute;
+  bottom:0;
+}
+.test_content span.state_dk{
+  color:#333333;
+}
+.test_content span.course_nums{
+  margin-left:0.28rem;
+}
+.test_content span.state_df,.state_time{
+  color:#333333;
+}
+.test_content span.state_df:before,.state_time:before{
+  content:":";
+  color:#999999;
+  margin:0 0.1rem;
+}
+.test_content span.list_enroll{
+  position:absolute;
+  right:0.43rem;
+  top:45%;
+  margin-top:-0.155rem;
+  font-size: 0.26rem;
+  color:#999;
+}
+.list_enroll2{
+  position:absolute;
+  right:0.43rem;
+  top:40%;
+  font-size: 0.26rem;
+  color:#999;
+}
+.span_right{
+  color:#b2b2b2;
+  font-size:0.24rem;
+  width:0.22rem;
+  height:0.42rem;
+  position:absolute;
+  right:0;
+  top:50%;
+  margin-top:-0.19rem;
+}
+.no_data{
+  background-color: #fff;
+  font-size: 0.28rem;
+  padding-top: 1rem;
+  text-align: center;
+}

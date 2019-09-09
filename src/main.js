@@ -1,0 +1,52 @@
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue';
+import App from './App';
+import router from './router';
+import common from './assets/js/common';
+import FastClick from 'fastclick';
+import { Lazyload, Indicator } from 'mint-ui';
+import './assets/css/reset.css';
+import './assets/css/common.css';
+import './assets/js/flexible.js';
+FastClick.attach(document.body);
+Vue.use(Lazyload, {
+  error: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbIAAAEECAIAAADCgiYjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjFDNTgwQ0JCQzUyQjExRTc5QUM4OEFBRjZDNzEwQzhDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjFDNTgwQ0JDQzUyQjExRTc5QUM4OEFBRjZDNzEwQzhDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MUM1ODBDQjlDNTJCMTFFNzlBQzg4QUFGNkM3MTBDOEMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MUM1ODBDQkFDNTJCMTFFNzlBQzg4QUFGNkM3MTBDOEMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7AHXiRAAAHzklEQVR42uzd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',
+  preLoad: 1.3
+  // loading: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSJ3aGl0ZSI+CiAgPHBhdGggb3BhY2l0eT0iLjI1IiBkPSJNMTYgMCBBMTYgMTYgMCAwIDAgMTYgMzIgQTE2IDE2IDAgMCAwIDE2IDAgTTE2IDQgQTEyIDEyIDAgMCAxIDE2IDI4IEExMiAxMiAwIDAgMSAxNiA0Ii8+CiAgPHBhdGggZD0iTTE2IDAgQTE2IDE2IDAgMCAxIDMyIDE2IEwyOCAxNiBBMTIgMTIgMCAwIDAgMTYgNHoiPgogICAgPGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIGZyb209IjAgMTYgMTYiIHRvPSIzNjAgMTYgMTYiIGR1cj0iMC44cyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgPC9wYXRoPgo8L3N2Zz4K'
+});
+Vue.config.productionTip = false;
+Vue.prototype.common = common;
+Vue.prototype.Indicator = Indicator;
+// 路由拦截
+router.beforeEach((to, from, next) => {
+  Indicator.open();
+  let auth = common.getUserInfo();
+  if (to.meta.title) { // 设置title
+    document.title = to.meta.title;
+  }
+  if (to.meta.requireAuth) { // 需要登录
+    if (auth) {
+      next();
+    } else {
+      next({
+        path: '/login',
+        query: {redirect: to.fullPath}  // 将跳转的路由path作为参数，登录成功后跳转到该路由
+      });
+    }
+  } else {
+    next();
+  }
+});
+router.afterEach((to, from) => {
+  setTimeout(function () {
+    Indicator.close();
+  }, 50);
+});
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  template: '<App/>',
+  components: { App }
+});

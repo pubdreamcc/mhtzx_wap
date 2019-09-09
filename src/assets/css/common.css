@@ -1,0 +1,158 @@
+/*全局样式*/
+
+
+/*-------字体文件-------*/
+
+@font-face {font-family: "iconfont";
+  src: url('../iconfont/iconfont.eot?t=1495700326495'); /* IE9*/
+  src: url('../iconfont/iconfont.eot?t=1495700326495#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../iconfont/iconfont.woff?t=1495700326495') format('woff'), /* chrome, firefox */
+  url('../iconfont/iconfont.ttf?t=1495700326495') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../iconfont/iconfont.svg?t=1495700326495#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sousuo01:before { content: "\e61e"; }
+
+.icon-zhibo1:before { content: "\e75d"; }
+
+.icon-aboutus:before { content: "\e616"; }
+
+.icon-wentifankui:before { content: "\e6fa"; }
+
+.icon-iconfonticonfont10shanchu:before { content: "\e61c"; }
+
+.icon-youyou:before { content: "\e608"; }
+
+.icon-xgmm:before { content: "\e61f"; }
+
+.icon-yonghu:before { content: "\e624"; }
+
+.icon-mima:before { content: "\e690"; }
+
+.icon-tongzhi:before { content: "\e62d"; }
+
+.icon-guanyuwomen:before { content: "\e9aa"; }
+
+.icon-bofang:before { content: "\e62f"; }
+
+.icon-qingchuhuancun:before { content: "\e698"; }
+
+.icon-duigou:before { content: "\e631"; }
+
+.icon-cuowu:before { content: "\e602"; }
+/*--------------字体文件结束---------------*/
+
+/* ----------------自定义mint--------------- */
+/*弹框*/
+.mint-msgbox {
+  font-size: 0.32rem!important;
+}
+.mint-msgbox-header {
+  padding: 0.4rem 0 0!important;
+}
+.mint-msgbox-content {
+  padding: 0.2rem 0.2rem 0.3rem!important;
+}
+.mint-msgbox-btns {
+  height: 0.88rem!important;
+}
+.mint-msgbox-title{
+  font-size: 0.34rem!important;
+}
+/*弹框结束*/
+/* 提示 */
+
+.mint-toast{
+  max-width: 90%;
+}
+.mint-toast *{
+  font-size: 32px!important;
+}
+/* 提示结束 */
+/* ----------------自定义mint结束--------------- */
+
+/* -------------自定义Mescroll字体----------------*/
+
+.mescroll-downwarp .downwarp-progress, .mescroll-upwarp .upwarp-progress{
+  width: 0.24rem!important;;
+  height: 0.24rem!important;;
+}
+.mescroll-downwarp .downwarp-tip, .mescroll-upwarp .upwarp-tip, .mescroll-upwarp .upwarp-nodata{
+  font-size: 0.28rem!important;
+}
+
+/*------------自定义Mescroll字体结束-------------*/
+
+/* --------轮播图点的位置大小-------- */
+.mint-swipe-indicator{
+  width: 12px!important;
+  height: 12px!important;
+}
+.mint-swipe-indicator.is-active{
+  opacity: 0.5!important;
+}
+.mint-swipe-indicators{
+  bottom: 0!important;
+}
+/* --------轮播图点的位置大小结束-------- */
+
+/*---------------自定义样式--------------*/
+html{
+  min-height: 100%;
+  height: 100%;
+}
+body {
+  overflow: hidden;
+  height: 100%;
+}
+#app {
+  height: 100%;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+.routerAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all .3s ease;
+}
+
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  -webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+}
+
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100% 0);
+}
+
+img[lazy=loading] {
+  margin: auto;
+  background: #ccc;
+}
+/*-------------------自定义样式结束---------------*/
+/*-------------vue-transition-----------------*/
+
+/*淡入淡出*/
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0;
+}
